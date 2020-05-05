@@ -9,7 +9,10 @@ jobs:
 
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
-
+      
+    - name: change dir
+      run: cd socks5
+      
     - name: MSBuild
-      working-directory: socks5
+      # working-directory: socks5
       run: msbuild socks5.csproj
